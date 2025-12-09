@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         better_zhihu
-// @namespace    https://github.com/erertertet/betterZhihu
+// @namespace    https://github.com/SUBearH/betterZhihu
 // @version      1.6.0
 // @description  在知乎回答和文章中标记评论/点赞比，将编辑时间和发布时间显示在标题下方，隐藏原始时间，优化分享和按钮布局，启用文本复制，获取无水印原图
-// @author       Erertertet
+// @author       Erertertet、SUBearH
 // @match        https://www.zhihu.com/*
 // @match        https://zhuanlan.zhihu.com/*
-// @downloadURL  https://github.com/erertertet/betterZhihu/blob/main/main.user.js?raw=true
-// @updateURL    https://github.com/erertertet/betterZhihu/blob/main/main.meta.js?raw=true
+// @downloadURL  https://github.com/SUBearH/betterZhihu/blob/main/main.user.js?raw=true
+// @updateURL    https://github.com/SUBearH/betterZhihu/blob/main/main.meta.js?raw=true
 // @grant        none
 // ==/UserScript==
 
@@ -49,6 +49,7 @@
     }
 
     // ==================== 获取无水印原图功能 ====================
+    // 感谢：Peter-JXL；https://github.com/Peter-JXL/UserScript
     // 原理：知乎的 Img 标签中有 data-original-token 属性，值为无水印图片的文件名。
     // 先获取它，再替换掉 Img 标签的 src 属性中的图片文件名，即可显示无水印图片。
     function getOriginalImgAndReplace() {
